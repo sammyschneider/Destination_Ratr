@@ -1,13 +1,13 @@
 RewriteEngine On
 
 RewriteCond %{REQUEST_METHOD} ^GET$
-RewriteRule ^destination$ controllers/destination.php?action=index
+RewriteRule ^destination$ controllers/routes.php?action=index
 
 RewriteCond %{REQUEST_METHOD} ^POST$
-RewriteRule ^destination$ controllers/destination.php?action=create
+RewriteRule ^destination$ controllers/routes.php?action=create
 
 RewriteCond %{REQUEST_METHOD} ^PUT$
-RewriteRule ^destination/([0-9]+)$ controllers/destination.php?action=update&id=$1
+RewriteRule ^destination/([0-9]+)$ controllers/routes.php?action=update&id=$1
 
 RewriteCond %{REQUEST_METHOD} ^DELETE$
-RewriteRule ^destination/([0-9]+)$ controllers/destination.php?action=delete&id=$1
+RewriteRule ^destination/([0-9]+)$ controllers/routes.php?action=delete&id=$1

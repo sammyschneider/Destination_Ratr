@@ -158,26 +158,31 @@ class App extends React.Component {
     })
   }
 
-  render = ()=> {
+  render = () => {
       return <div>
-      <h2>Create Destination </h2>
-      <form onSubmit={this.createDestination}>
-          <input onKeyUp={this.changeNewDestinationLocation} type="text" placeholder="Where"/><br/>
-          <input onKeyUp={this.changeNewDestinationImg} type="text" placeholder="<img>"/><br/>
-          <input onKeyUp={this.changeNewDestinationRating} type="number" max="5" min="1" placeholder="Rating"/><br/>
-          <input onKeyUp={this.changeNewDestinationCost} type="number" placeholder="Cost"/><br/>
-          <input onKeyUp={this.changeNewDestinationTitle} type="text" placeholder="Title"/><br/>
-          <input onKeyUp={this.changeNewDestinationDated} type="date" placeholder="Date"/><br/>
-          <input onKeyUp={this.changeNewDestinationDescription} type="textarea" placeholder="Description"/><br/>
-          <input type="submit" value="Create Destination"/>
+      <h2 className="card-header info-color white-text text-center py-4">
+          <strong>
+              Create Destination
+          </strong>
+           </h2>
+      <form className="text-center border border-light p-5" action="#!" onSubmit={this.createDestination}>
+          <input className="form-control mb-4" onKeyUp={this.changeNewDestinationLocation} type="text" placeholder="Where"/><br/>
+          <input className="form-control mb-4" onKeyUp={this.changeNewDestinationImg} type="text" placeholder="<img>"/><br/>
+          <input  className="form-control mb-4" onKeyUp={this.changeNewDestinationRating} type="number" max="5" min="1" placeholder="Rating"/><br/>
+          <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" placeholder="Cost"/><br/>
+          <input className="form-control mb-4" onKeyUp={this.changeNewDestinationTitle} type="text" placeholder="Title"/><br/>
+          <input className="form-control mb-4" onKeyUp={this.changeNewDestinationDated} type="date" placeholder="Date"/><br/>
+          <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" onKeyUp={this.changeNewDestinationDescription}  placeholder="Description"/><br/>
+          <button className="btn btn-info btn-block" type="submit">Create</button>
       </form>
       <h2>List of Destinations</h2>
-      <ul>
+      <div class="list card">
           {
               this.state.trips.map(
                   (destination) => {
-                      return <li>
-                      Id: {destination.id}<br/>
+                      return (
+                      <div className="col-lg-4 col-md-6 mb-4" style="margin-top: 28px">
+                          <div className="view view-cascade">
                           {destination.location} <br/>
                           {destination.img} <br/>
                           {destination.rating} <br/>
@@ -185,27 +190,35 @@ class App extends React.Component {
                           {destination.title} <br/>
                           {destination.dated} <br/>
                           {destination.description} <br/>
-                          <button value={destination.id} onClick={this.deleteDestination}>
+                          <button className="btn btn-info btn-block" value={destination.id} onClick={this.deleteDestination}>
                               DELETE
                           </button>
+                          </div>
+                        
+                          
                           <form id={destination.id} onSubmit={this.updateDestination}>
-                          <input onKeyUp={this.changeUpdateDestinationLocation} type="text" placeholder="Where"/><br/>
-                          <input onKeyUp={this.changeUpdateDestinationImg} type="text" placeholder="<img>"/><br/>
-                          <input onKeyUp={this.changeUpdateDestinationRating} type="number" max="5" min="1" placeholder="Rating"/><br/>
-                          <input onKeyUp={this.changeUpdateDestinationCost} type="number" placeholder="Cost"/><br/>
-                          <input onKeyUp={this.changeUpdateDestinationTitle} type="text" placeholder="Title"/><br/>
-                          <input onKeyUp={this.changeUpdateDestinationDated} type="date" placeholder="Date"/><br/>
-                          <input onKeyUp={this.changeUpdateDestinationDescription} type="textarea" placeholder="Description"/><br/>
-                              <input type="submit" value="Update Destination"/>
+                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationLocation} type="text" placeholder="Where"/><br/>
+                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationImg} type="text" placeholder="<img>"/><br/>
+                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationRating} type="number" max="5" min="1" placeholder="Rating"/><br/>
+                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationCost} type="number" placeholder="Cost"/><br/>
+                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationTitle} type="text" placeholder="Title"/><br/>
+                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDated} type="date" placeholder="Date"/><br/>
+                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDescription} type="textarea" placeholder="Description"/><br/>
+                              <button className="btn btn-info btn-block" type="submit">Update</button>
                           </form>
-                      </li>
+                      </div>
+                      )
                   }
               )
           }
-      </ul>
+      
+      </div>
       </div>
   }
 }
+
+
+
 
 
 

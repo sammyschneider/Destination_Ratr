@@ -63,6 +63,7 @@ class App extends React.Component {
   // CREATE DESTINATION
   createDestination = (event) => {
     event.preventDefault();
+    event.target.reset();
     axios.post(
         '/destination',
         {
@@ -77,7 +78,8 @@ class App extends React.Component {
     ).then(
         (response) => {
             this.setState({
-              trips: response.data
+              trips: response.data,
+              showCreate: false
             });
         }
     )

@@ -1,6 +1,7 @@
 --CREATE DATABASE
 CREATE DATABASE destination_ratr;
 \c destination_ratr;
+
 --CREATE TABLE
 CREATE TABLE destination(
   id SERIAL,

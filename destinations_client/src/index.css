@@ -64,3 +64,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.sidez {
+  display: flex;
+}
+.list {
+  text-align: center;
+}
+img {
+  width: 100%;
+  height: 100%;
+}

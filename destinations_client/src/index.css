@@ -32,6 +32,8 @@
 background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80")no-repeat center center;
 background-size: cover;
 }
+
+
 /* ^^North Shore, Waialua, United States */
 
 /* Hong Kong
@@ -89,3 +91,20 @@ img {
   display: flex;
   justify-content: space-between;
 }
+
+.carousel-item active {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* HIDES RADIO BUTTON */
+input[type="radio"] {
+  display: none;
+}
+
+#star {
+  cursor: pointer;
+  transition: color 200ms;
+}
+
+/* yellow: #ffc107
+gray: #e4e5e9 */

@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
+import StarRating from './StarRating';
 
 class App extends React.Component {
   state = {
@@ -216,6 +217,38 @@ class App extends React.Component {
         </div>
       </div>
     </nav>
+                                {/* ======= CAROUSEL ======= */}
+    <div id="introCarousel"className="carousel slide carousel-fade shadow-2-strong"  data-ride="carousel">
+        <ol className="carousel-indicators">
+            <li data-target="#introCarousel" data-slide-to="0" className="active"></li>
+            <li data-target="#introCarousel" data-slide-to="1"></li>
+            <li data-target="#introCarousel" data-slide-to="2"></li>
+        </ol>
+        <div className="carousel-inner">
+            <div className="carousel-item active">
+                <div className="mask" id="caroMask">
+                <img src="https://images.unsplash.com/photo-1494633114655-819eb91fde40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" className="d-block w-100" alt="Hong Kong Image"/>
+                <div className="d-flex justify-content-center align-items-center h-100"/>
+                </div>
+            </div>
+            <div className="carousel-item">
+                <img src="https://images.unsplash.com/photo-1490237014491-822aee911b99?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" className="d-block w-100" alt="Iceland Image"/>
+            </div>
+            <div className="carousel-item">
+                <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" className="d-block w-100" alt="Canada Image"/>
+            </div>
+        </div>
+                    {/* ======= CAROUSEL CONTROLS ======= */}
+        <a className="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="sr-only">Previous</span>
+        </a>
+        <a className="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="sr-only">Next</span>
+        </a>
+        </div>
+
                         {/* ======= JUMBOTRON ======= */}
     <div className="jumbotron card card-image" id="jumbo">
       <div className="text-white text-center py-5 px-4">
@@ -229,7 +262,15 @@ class App extends React.Component {
         </div>
       </div>
     </div>
-                        {/* ======= CREATE FORM ======= */}
+
+
+            {/* ======= STAR RATING TEST w/ DIV ======= */}
+                    <div class="ratingOfStars">
+                            <StarRating/>
+                    </div>
+
+
+                {/* ======= CREATE FORM ======= */}
       <div className="create_form">
         {this.state.showCreate ? <form className="text-center border border-light p-5" action="#!" onSubmit={this.createDestination}>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationLocation} type="text" placeholder="Where"/><br/>
@@ -282,20 +323,17 @@ class App extends React.Component {
                           <textarea className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDescription} placeholder="Description"/><br/>
                               <button className="btn btn-info btn-block" type="submit">Save</button>
                           </form>: null}
-                      </div>
-                      </div>
+                                </div>
+                            </div>
                         </div>
-</div>
+                    </div>
                   }
               )
           }
-
           </div>
-    </div> //closing div
+    </div> 
   }
 }
-
-
 
 
 

@@ -177,7 +177,7 @@ class App extends React.Component {
 
   render = () => {
       return <div>
-      <nav className="navbar navbar-expand-lg navbar-light d-none d-lg-block" id="navigation">
+      <nav className="navbar navbar-expand-lg navbar-light d-lg-block" id="navigation">
         <div className="container-fluid">
           <a className="navbar-brand nav-link" href="#">Destination Ratr</a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

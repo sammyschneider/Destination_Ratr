@@ -1,0 +1,202 @@
+#navigation{
+  z-index: 2000;
+  margin: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  position: absolute;
+}
+
+#navCollapse {
+  margin-left: 49%
+}
+
+.navbar-expand-lg,
+.navbar-nav,
+.nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+.navbar-brand {
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+
+.nav-link {
+  display: block;
+  padding: .5rem 1rem;
+  text-decoration: none;
+}
+
+#cardposts {
+  margin-top: 28px;
+  width: 31%;
+  /* align-items: stretch; */
+}
+
+.create_form {
+  width: 50%;
+  margin: auto;
+}
+
+#jumbo {
+background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80")no-repeat center center;
+background-size: cover;
+}
+
+
+/* ^^North Shore, Waialua, United States */
+
+/* Hong Kong
+https://images.unsplash.com/photo-1494633114655-819eb91fde40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
+
+Stakkholtsgjá, Iceland
+https://images.unsplash.com/photo-1490237014491-822aee911b99?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
+
+Havana, Cuba
+https://images.unsplash.com/photo-1500759285222-a95626b934cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80
+
+Moraine Lake, Canada
+https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80
+
+San Diego, California, United States
+https://images.unsplash.com/photo-1471922694854-ff1b63b20054?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80
+
+San Francisco, California, United States
+https://images.unsplash.com/photo-1475189778702-5ec9941484ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80
+
+Venezia, Italy
+https://images.unsplash.com/photo-1498307833015-e7b400441eb8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80
+
+Machu Picchu, Peru
+https://images.unsplash.com/photo-1461681922067-669418071e5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80 */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.sidez {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#list {
+  text-align: center;
+}
+.card-img {
+  /* width: 311px; */
+  height: 225px;
+}
+
+.container-fluid{
+  display: flex;
+  justify-content: space-between;
+}
+
+.mask {
+  background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-attachment: fixed;
+
+}
+
+/* HIDES RADIO BUTTON */
+input[type="radio"] {
+  display: none;
+}
+
+#star {
+  cursor: pointer;
+  transition: color 200ms;
+}
+
+/* yellow: #ffc107
+gray: #e4e5e9 */
+.py-lg-4 {
+  height: 10px;
+}
+textarea {
+  max-height: 175px;
+}
+.btn {
+  margin-top: 2%;
+
+}
+.review {
+  text-decoration: underline;
+}
+
+
+/* .carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  background-size: cover;
+  margin: 0 0 0;
+} */
+
+/* .d-block {
+  height: 100% !important;
+}
+
+.d-flex {
+  display: flex!important;
+}
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+ {
+  height: 100vh;
+}
+
+.carousel {
+  position: relative;
+} */
+
+.footerP {
+  line-height: 1.7rem
+}
+
+#firstFooterHR {
+margin: 0 15%;
+}
+
+#secondFooterHR {
+margin: 10% 15% 5%;
+}
+
+#navExample011 {
+  display: flex;
+  align-self: flex-end;
+}
+
+#footerSocials {
+
+}
+
+.page-footer {
+  height: 10%;
+}

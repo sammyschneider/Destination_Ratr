@@ -178,41 +178,23 @@ class App extends React.Component {
 
   render = () => {
       return <div>
-      <nav className="navbar navbar-expand-lg navbar-light d-lg-block" id="navigation">
+      <nav className="navbar navbar-expand-lg navbar-light d-lg-block z-index bg-light" id="navigation">
         <div className="container-fluid">
           <a className="navbar-brand nav-link" target="_blank" href="#">
               <strong>Destination Ratr</strong>
           </a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navExample01"
+            aria-controls="navExample01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-        <div className="collapse navbar-collapse" id="basicExampleNav">
+        <div className="collapse navbar-collapse" id="navExample011">
             <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
-                <li className="nav-item active">
-                  <a className="nav-link" aria-current="page" href="#">Home</a>
-                </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">Register</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">Log In</a>
                 </li>
-                <ul className="navbar-nav list-inline">
-                    {/* ======= ICONS ======= */}
-                <li className>
-                  <a className="nav-link" href="#"><i className="fab fa-linkedin"></i></a>
-                </li>
-                <li className>
-                  <a className="nav-link" href="#"><i className="fab fa-twitter"></i></a>
-                </li>
-                <li className>
-                  <a className="nav-link" href="#"><i className="fab fa-youtube"></i></a>
-                </li>
-                <li className>
-                  <a className="nav-link" href="#"><i className="fab fa-github"></i></a>
-                </li>
-              </ul>
             </ul>
         </div>
       </div>
@@ -226,21 +208,15 @@ class App extends React.Component {
       </ol>
       <div className="carousel-inner" role="listbox">
         <div className="carousel-item active">
-
-
           <div className="view">
-
-            <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
-
-
-              alt="First slide"/>
+            <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"alt="Waialua Beach"/>
             <div className="d-flex justify-content-center align-items-center h-100 mask rgba-black-light">
-
-
-          </div>
           </div>
           <div className="carousel-caption">
-            <h4 className="mx-5 mb-5 text-white text-center"><strong>Welcome to Destination Ratr!</strong>
+            <h4 className="mx-5 mb-5 text-white text-center">
+                <strong>
+                    Welcome to Destination Ratr!
+                </strong>
             </h4>
             <h5>
             Create your trip now
@@ -250,7 +226,7 @@ class App extends React.Component {
             </button>
           </div>
         </div>
-
+</div>
         <div className="carousel-item">
           <div className="view">
 
@@ -305,20 +281,19 @@ class App extends React.Component {
                 {/* ======= CREATE FORM ======= */}
       <div className="create_form">
         {this.state.showCreate ? <form className="text-center border border-light p-5" action="#!" onSubmit={this.createDestination}>
-            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationLocation} type="text" placeholder="Where"/>
-            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationImg} type="text" placeholder="<img>"/>
-            <input  className="form-control mb-4" onKeyUp={this.changeNewDestinationRating} type="number" max="5" min="1" placeholder="Rating"/>
-            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" min="1" max="5" placeholder="Cost ($)"/>
-            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" max="5" min="1" placeholder="Cost ($)"/>
-            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationTitle} type="text" placeholder="Title"/>
-            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationDated} type="text" placeholder="mm/dd/yyyy"/>
-            <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" onKeyUp={this.changeNewDestinationDescription}  placeholder="Description"/>
+            <label><strong>Location: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationLocation} type="text" placeholder="Where"/>
+            <label><strong>Image: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationImg} type="text" placeholder="<img>"/>
+            <label><strong>Rating: </strong></label><input  className="form-control mb-4" onKeyUp={this.changeNewDestinationRating} type="number" max="5" min="1" placeholder="Rating"/>
+            <label><strong>Cost: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" max="5" min="1" placeholder="Cost ($)"/>
+            <label><strong>Title: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationTitle} type="text" placeholder="Title"/>
+            <label><strong>Date: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationDated} type="text" placeholder="mm/dd/yyyy"/>
+            <label><strong>Description: </strong></label><textarea className="form-control rounded-0" id="exampleFormControlTextarea2" onKeyUp={this.changeNewDestinationDescription}  placeholder="Description"/>
             <button className="btn btn-info btn-block" type="submit">Create</button>
         </form> : null}
       </div>
-      <div className="ratingOfStars">
+      {/* <div className="ratingOfStars">
                             <StarRating/>
-                    </div>
+                    </div> */}
 
                     {/* ======= DESTINATIONS LIST & CARDS ======= */}
       <h2 className="card-header info-color white-text text-center py-4" id="list">Destinations</h2>
@@ -356,17 +331,17 @@ class App extends React.Component {
                           </button>
                           {/* ======= UPDATE FORM ======= */}
                           {this.state.showUpdate ? <form id={destination.id} onSubmit={this.updateDestination}>
-                          <label>Location</label>
+                          <label><strong>Location: </strong></label>
                           <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationLocation} type="text" placeholder={destination.location}/>
-                          <label>Image</label>
+                          <label><strong>Image: </strong></label>
                           <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationImg} type="text" placeholder={destination.img}/>
-                          <label>Rating</label>
+                          <label><strong>Rating: </strong></label>
                           <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationRating} type="number" max="5" min="1" placeholder={destination.rating}/>
-                          <label>Cost</label>
+                          <label><strong>Cost: </strong></label>
                           <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationCost} type="number" min="1" max="5" placeholder={destination.cost}/>
-                          <label>Title</label>
+                          <label><strong>Title: </strong></label>
                           <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationTitle} type="text" placeholder={destination.title}/>
-                          <label>Date</label>
+                          <label><strong>Date: </strong></label>
                           <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDated} type="text" name="begin" min="1997-01-01" max="2030-12-31" placeholder={destination.dated}/>
                           <textarea className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDescription} placeholder={destination.description}/>
                               <button className="btn btn-block btn-success" type="submit">Save Changes</button>
@@ -374,11 +349,56 @@ class App extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        
 
                   }
               )
           }
-          </div>
+          
+          </div>      
+<footer className="page-footer font-small">
+  <div className="container">
+    
+    <hr className="rgba-white-light" id="firstFooterHR"/>
+    <div className="row d-flex text-center justify-content-center mb-md-0 mb-4">
+      <div className="col-md-8 col-12 mt-5">
+        <p className="footerP">Thanks for traveling with us!</p>
+      </div>
+    </div>
+    <hr className="clearfix d-md-none rgba-white-light" id="secondFooterHR" />
+    <div className="row pb-3">
+      <div className="col-md-12">
+        <div className="mb-5 flex-center text-center" id="footerSocials">
+          {/* <!-- Facebook --> */}
+          <a className="fb-ic">
+            <i className="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+          </a>
+          {/* <!-- Twitter --> */}
+          <a className="tw-ic">
+            <i className="fab fa-twitter fa-lg white-text mr-4"> </i>
+          </a>
+          {/* <!--Linkedin --> */}
+          <a className="li-ic">
+            <i className="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
+          </a>
+          {/* <!--Instagram--> */}
+          <a className="ins-ic">
+            <i className="fab fa-instagram fa-lg white-text mr-4"> </i>
+          </a>
+          {/* <!--Github--> */}
+          <a className="git-ic">
+            <i className="fab fa-github fa-lg white-text"> </i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr className="clearfix rgba-white-light" id="secondFooterHR" />
+  </div>
+  
+  <div className="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> <strong>Destination Ratr</strong></a>
+  </div>
+</footer>
     </div>
   }
 }

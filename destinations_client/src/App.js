@@ -183,9 +183,9 @@ class App extends React.Component {
           <a className="navbar-brand nav-link" target="_blank" href="#">
               <strong>Destination Ratr</strong>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
             aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
         <div className="collapse navbar-collapse" id="basicExampleNav">
             <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
@@ -218,21 +218,29 @@ class App extends React.Component {
       </div>
     </nav>
 
-    <div id="carousel-example-2" className="carousel slide carousel-fade" data-ride="carousel">
+    <div id="introCarousel" className="carousel slide carousel-fade shadow-2-strong" data-ride="carousel">
       <ol className="carousel-indicators">
-        <li data-target="#carousel-example-2" data-slide-to="0" className="active"></li>
-        <li data-target="#carousel-example-2" data-slide-to="1"></li>
-        <li data-target="#carousel-example-2" data-slide-to="2"></li>
+        <li data-target="#introCarousel" data-slide-to="0" className="active"></li>
+        <li data-target="#introCarousel" data-slide-to="1"></li>
+        <li data-target="#introCarousel" data-slide-to="2"></li>
       </ol>
       <div className="carousel-inner" role="listbox">
         <div className="carousel-item active">
+            
+            
           <div className="view">
-            <img className="d-block w-100 vh-75 h-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+
+            <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+
+
               alt="First slide"/>
-            <div className="mask rgba-black-light"></div>
+            <div className="d-flex justify-content-center align-items-center h-100 mask rgba-black-light">
+             
+                
+          </div>
           </div>
           <div className="carousel-caption">
-            <h4 className="mx-5 mb-5">Welcome to Destination Ratr!
+            <h4 className="mx-5 mb-5 text-white text-center"><strong>Welcome to Destination Ratr!</strong>
             </h4>
             <h5>
             Create your trip now
@@ -242,14 +250,17 @@ class App extends React.Component {
             </button>
           </div>
         </div>
+        
         <div className="carousel-item">
           <div className="view">
-            <img className="d-block w-100 vh-75 h-100" src="https://i.ytimg.com/vi/GM9sisF4OEI/maxresdefault.jpg"
+
+            <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1500759285222-a95626b934cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+
               alt="Second slide"/>
             <div className="mask rgba-black-strong"></div>
           </div>
           <div className="carousel-caption">
-            <h4 className="mx-5 mb-5">Welcome to Destination Ratr!
+            <h4 className="mx-5 mb-5 text-white text-center"><strong>Welcome to Destination Ratr!</strong>
             </h4>
             <h5>
             Create your trip now
@@ -261,12 +272,14 @@ class App extends React.Component {
         </div>
         <div className="carousel-item">
           <div className="view">
-            <img className="d-block w-100 vh-75 h-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+
+            <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1461681922067-669418071e5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+
               alt="Third slide"/>
             <div className="mask rgba-black-slight"></div>
           </div>
           <div className="carousel-caption">
-          <h4 className="mx-5 mb-5">Welcome to Destination Ratr!
+          <h4 className="mx-5 mb-5 text-white text-center"><strong>Welcome to Destination Ratr!</strong>
           </h4>
           <h5>
           Create your trip now
@@ -277,11 +290,11 @@ class App extends React.Component {
           </div>
         </div>
       </div>
-          <a className="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+          <a className="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="sr-only">Previous</span>
           </a>
-          <a className="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+          <a className="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="sr-only">Next</span>
           </a>
@@ -295,13 +308,17 @@ class App extends React.Component {
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationLocation} type="text" placeholder="Where"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationImg} type="text" placeholder="<img>"/>
             <input  className="form-control mb-4" onKeyUp={this.changeNewDestinationRating} type="number" max="5" min="1" placeholder="Rating"/>
-            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" min="0" placeholder="Cost ($)"/>
+            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" max="5" min="1" placeholder="Cost ($)"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationTitle} type="text" placeholder="Title"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationDated} type="text" placeholder="mm/dd/yyyy"/>
             <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" onKeyUp={this.changeNewDestinationDescription}  placeholder="Description"/>
             <button className="btn btn-info btn-block" type="submit">Create</button>
         </form> : null}
       </div>
+      <div className="ratingOfStars">
+                            <StarRating/>
+                    </div>
+
                     {/* ======= DESTINATIONS LIST & CARDS ======= */}
       <h2 className="card-header info-color white-text text-center py-4" id="list">Destinations</h2>
       <div className="sidez">

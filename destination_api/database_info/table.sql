@@ -31,4 +31,40 @@ INSERT INTO
   destination
   ( location, img, rating, cost, title, dated, description )
 VALUES
+  ( 'Ricefields tegallang, Indonesia' , 'https://images.unsplash.com/photo-1496531693211-31c5234a5ea9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80' , 5, 3, 'A-maze-thing', '02/27/2016', 'Never have I ever.. seen such a beautiful sight of greenery until I visited Indonesia. Please, please, please, if you enjoy natural landscapes, make this a priority!' );
+
+INSERT INTO
+  destination
+  ( location, img, rating, cost, title, dated, description )
+VALUES
+  ( 'Hong Kong' , 'https://images.unsplash.com/photo-1494633114655-819eb91fde40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80' , 5, 3, 'A-maze-thing', '02/27/2016', 'Never have I ever.. seen such a beautiful sight of greenery until I visited Indonesia. Please, please, please, if you enjoy natural landscapes, make this a priority!' ); 
+
+INSERT INTO
+  destination
+  ( location, img, rating, cost, title, dated, description )
+VALUES
+  ( 'Ricefields tegallang, Indonesia' , 'https://images.unsplash.com/photo-1496531693211-31c5234a5ea9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80' , 5, 3, 'A-maze-thing', '02/27/2016', 'Never have I ever.. seen such a beautiful sight of greenery until I visited Indonesia. Please, please, please, if you enjoy natural landscapes, make this a priority!' ); 
+
+INSERT INTO
+  destination
+  ( location, img, rating, cost, title, dated, description )
+VALUES
+  ( 'Ricefields tegallang, Indonesia' , 'https://images.unsplash.com/photo-1496531693211-31c5234a5ea9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80' , 5, 3, 'A-maze-thing', '02/27/2016', 'Never have I ever.. seen such a beautiful sight of greenery until I visited Indonesia. Please, please, please, if you enjoy natural landscapes, make this a priority!' ); 
+
+INSERT INTO
+  destination
+  ( location, img, rating, cost, title, dated, description )
+VALUES
+  ( 'Ricefields tegallang, Indonesia' , 'https://images.unsplash.com/photo-1496531693211-31c5234a5ea9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80' , 5, 3, 'A-maze-thing', '02/27/2016', 'Never have I ever.. seen such a beautiful sight of greenery until I visited Indonesia. Please, please, please, if you enjoy natural landscapes, make this a priority!' ); 
+
+INSERT INTO
+  destination
+  ( location, img, rating, cost, title, dated, description )
+VALUES
+  ( 'Ricefields tegallang, Indonesia' , 'https://images.unsplash.com/photo-1496531693211-31c5234a5ea9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80' , 5, 3, 'A-maze-thing', '02/27/2016', 'Never have I ever.. seen such a beautiful sight of greenery until I visited Indonesia. Please, please, please, if you enjoy natural landscapes, make this a priority!' ); 
+
+INSERT INTO
+  destination
+  ( location, img, rating, cost, title, dated, description )
+VALUES
   ( 'Ricefields tegallang, Indonesia' , 'https://images.unsplash.com/photo-1496531693211-31c5234a5ea9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80' , 5, 3, 'A-maze-thing', '02/27/2016', 'Never have I ever.. seen such a beautiful sight of greenery until I visited Indonesia. Please, please, please, if you enjoy natural landscapes, make this a priority!' ); 

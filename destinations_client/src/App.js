@@ -226,8 +226,8 @@ class App extends React.Component {
       </ol>
       <div className="carousel-inner" role="listbox">
         <div className="carousel-item active">
-            
-            
+
+
           <div className="view">
 
             <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
@@ -235,8 +235,8 @@ class App extends React.Component {
 
               alt="First slide"/>
             <div className="d-flex justify-content-center align-items-center h-100 mask rgba-black-light">
-             
-                
+
+
           </div>
           </div>
           <div className="carousel-caption">
@@ -250,7 +250,7 @@ class App extends React.Component {
             </button>
           </div>
         </div>
-        
+
         <div className="carousel-item">
           <div className="view">
 
@@ -308,6 +308,7 @@ class App extends React.Component {
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationLocation} type="text" placeholder="Where"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationImg} type="text" placeholder="<img>"/>
             <input  className="form-control mb-4" onKeyUp={this.changeNewDestinationRating} type="number" max="5" min="1" placeholder="Rating"/>
+            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" min="1" max="5" placeholder="Cost ($)"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" max="5" min="1" placeholder="Cost ($)"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationTitle} type="text" placeholder="Title"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationDated} type="text" placeholder="mm/dd/yyyy"/>
@@ -328,21 +329,24 @@ class App extends React.Component {
                                 {/* ======= CARDS ======= */}
                       return <div className="col-lg-4 col-md-6 mb-4" id="cardposts">
                         <div className="card card-cascade narrower">
-                          <h4 className="py-lg-4 pb-4 text-center">{destination.location}</h4>
-                          <br/>
                             <div className="view view-cascade overlay">
                               <img src={destination.img} className="card-img" />
                             <br/>
                             </div>
-                          <div className="card-body card-body-cascade">
+                          <div className="card-body card-body-cascade text-center">
                           <h5 className="pink-text"><i className="fas fa-plane-departure"></i> {destination.location}</h5> <br/>
                           <h4 className="card-title">{destination.title}</h4>
-                          Rating: {destination.rating} <br/>
-                          Cost: ${destination.cost} <br/>
-                          <p className="card-text">Date: {destination.dated}
+                          <strong>Rating</strong>: {destination.rating} <br/>
+                          <strong>Cost</strong>: {destination.cost===5? '$$$$$' :null }
+                          {destination.cost===4? '$$$$' :null }
+                          {destination.cost===3? '$$$' :null }
+                          {destination.cost===2? '$$' :null }
+                          {destination.cost===1? '$' :null }
+                          <br/>
+                          <p className="card-text"><strong>Date</strong>: {destination.dated}
                           <br/>
                           </p>
-                          <p className="card-text"><span className = "review">Review:</span><br/> {destination.description} <br/>
+                          <p className="card-text"><strong>Review</strong>:<br/> {destination.description} <br/>
                           </p>
                           <button className="btn btn-info btn-block btn-danger" value={destination.id} onClick={this.deleteDestination}>
                               DELETE
@@ -359,7 +363,7 @@ class App extends React.Component {
                           <label>Rating</label>
                           <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationRating} type="number" max="5" min="1" placeholder={destination.rating}/>
                           <label>Cost</label>
-                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationCost} type="number" placeholder={destination.cost}/>
+                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationCost} type="number" min="1" max="5" placeholder={destination.cost}/>
                           <label>Title</label>
                           <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationTitle} type="text" placeholder={destination.title}/>
                           <label>Date</label>

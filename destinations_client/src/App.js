@@ -229,7 +229,10 @@ class App extends React.Component {
             
             
           <div className="view">
+
             <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+
+
               alt="First slide"/>
             <div className="d-flex justify-content-center align-items-center h-100 mask rgba-black-light">
              
@@ -250,7 +253,9 @@ class App extends React.Component {
         
         <div className="carousel-item">
           <div className="view">
+
             <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1500759285222-a95626b934cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+
               alt="Second slide"/>
             <div className="mask rgba-black-strong"></div>
           </div>
@@ -267,7 +272,9 @@ class App extends React.Component {
         </div>
         <div className="carousel-item">
           <div className="view">
+
             <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1461681922067-669418071e5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+
               alt="Third slide"/>
             <div className="mask rgba-black-slight"></div>
           </div>
@@ -324,7 +331,7 @@ class App extends React.Component {
                           <h4 className="py-lg-4 pb-4 text-center">{destination.location}</h4>
                           <br/>
                             <div className="view view-cascade overlay">
-                              <img src={destination.img} className="card-img-top" />
+                              <img src={destination.img} className="card-img" />
                             <br/>
                             </div>
                           <div className="card-body card-body-cascade">

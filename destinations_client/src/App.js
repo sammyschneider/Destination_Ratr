@@ -178,7 +178,7 @@ class App extends React.Component {
 
   render = () => {
       return <div>
-      <nav className="navbar navbar-expand-lg navbar-light d-lg-block z-index bg-light" id="navigation">
+      <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="navigation">
         <div className="container-fluid">
           <a className="navbar-brand nav-link" target="_blank" href="#">
               <strong>Destination Ratr</strong>
@@ -210,7 +210,7 @@ class App extends React.Component {
         <div className="carousel-item active">
           <div className="view">
             <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"alt="Waialua Beach"/>
-            <div className="d-flex justify-content-center align-items-center h-100 mask rgba-black-light">
+            <div className="d-flex justify-content-center align-items-center h-100 ">
           </div>
           <div className="carousel-caption">
             <h4 className="mx-5 mb-5 text-white text-center">
@@ -232,8 +232,8 @@ class App extends React.Component {
 
             <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1500759285222-a95626b934cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
 
-              alt="Second slide"/>
-            <div className="mask rgba-black-strong"></div>
+              alt="Cuba"/>
+            
           </div>
           <div className="carousel-caption">
             <h4 className="mx-5 mb-5 text-white text-center"><strong>Welcome to Destination Ratr!</strong>
@@ -251,8 +251,8 @@ class App extends React.Component {
 
             <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1461681922067-669418071e5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
 
-              alt="Third slide"/>
-            <div className="mask rgba-black-slight"></div>
+              alt="Machu Picchu"/>
+            
           </div>
           <div className="carousel-caption">
           <h4 className="mx-5 mb-5 text-white text-center"><strong>Welcome to Destination Ratr!</strong>

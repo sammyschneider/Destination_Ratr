@@ -1,5 +1,10 @@
 #navigation{
   z-index: 2000;
+  margin: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  position: absolute;
 }
 
 #navCollapse {
@@ -144,7 +149,13 @@ textarea {
 }
 
 
-
+/* .carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  background-size: cover;
+  margin: 0 0 0;
+} */
 
 /* .d-block {
   height: 100% !important;

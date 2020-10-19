@@ -10,6 +10,6 @@ CREATE TABLE destination(
   rating int,
   cost int,
   title varchar(255),
-  dated timestamp,
+  dated text,
   description text
 );

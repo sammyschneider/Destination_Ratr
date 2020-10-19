@@ -297,7 +297,7 @@ class App extends React.Component {
             <input  className="form-control mb-4" onKeyUp={this.changeNewDestinationRating} type="number" max="5" min="1" placeholder="Rating"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" min="0" placeholder="Cost ($)"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationTitle} type="text" placeholder="Title"/>
-            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationDated} type="text" placeholder="yyyy-mm-dd"/>
+            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationDated} type="text" placeholder="mm/dd/yyyy"/>
             <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" onKeyUp={this.changeNewDestinationDescription}  placeholder="Description"/>
             <button className="btn btn-info btn-block" type="submit">Create</button>
         </form> : null}
@@ -346,7 +346,7 @@ class App extends React.Component {
                           <label>Title</label>
                           <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationTitle} type="text" placeholder={destination.title}/>
                           <label>Date</label>
-                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDated} type="date" name="begin" min="1997-01-01" max="2030-12-31" placeholder={destination.dated}/>
+                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDated} type="text" name="begin" min="1997-01-01" max="2030-12-31" placeholder={destination.dated}/>
                           <textarea className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDescription} placeholder={destination.description}/>
                               <button className="btn btn-block btn-success" type="submit">Save Changes</button>
                           </form>: null}

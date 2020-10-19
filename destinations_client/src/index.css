@@ -35,7 +35,8 @@
 
 #cardposts {
   margin-top: 28px;
-  width: 33%;
+  width: 31%;
+  /* align-items: stretch; */
 }
 
 .create_form {
@@ -99,7 +100,7 @@ code {
   text-align: center;
 }
 .card-img {
-  width: 311px;
+  /* width: 311px; */
   height: 225px;
 }
 
@@ -119,7 +120,7 @@ code {
       height: 100%;
       overflow: hidden;
       background-attachment: fixed;
-      
+
 }
 
 /* HIDES RADIO BUTTON */

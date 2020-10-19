@@ -297,68 +297,67 @@ class App extends React.Component {
 
                     {/* ======= DESTINATIONS LIST & CARDS ======= */}
       <h2 className="card-header info-color white-text text-center py-4" id="list">Destinations</h2>
-      <div className="sidez">
+      <div className="row row-cols-1 row-cols-md-3">
           {
               this.state.trips.map(
                   (destination) => {
-                                {/* ======= CARDS ======= */}
-                      return <div className="col-lg-4 col-md-6 mb-4" id="cardposts">
-                        <div className="card card-cascade narrower">
-                            <div className="view view-cascade overlay">
-                              <img src={destination.img} className="card-img" />
-                            <br/>
-                            </div>
-                          <div className="card-body card-body-cascade text-center">
-                          <h5 className="pink-text"><i className="fas fa-plane-departure"></i> {destination.location}</h5> <br/>
-                          <h4 className="card-title">{destination.title}</h4>
-                          <strong>Rating</strong>: {destination.rating} <br/>
-                          <strong>Cost</strong>: {destination.cost===5? '$$$$$' :null }
-                          {destination.cost===4? '$$$$' :null }
-                          {destination.cost===3? '$$$' :null }
-                          {destination.cost===2? '$$' :null }
-                          {destination.cost===1? '$' :null }
-                          <br/>
-                          <p className="card-text"><strong>Date</strong>: {destination.dated}
-                          <br/>
-                          </p>
-                          <p className="card-text"><strong>Review</strong>:<br/> {destination.description} <br/>
-                          </p>
-                          <button className="btn btn-info btn-block btn-danger" value={destination.id} onClick={this.deleteDestination}>
-                              DELETE
-                          </button>
-                          <button className="btn btn-info btn-block" onClick={this.toggleUpdate}>
-                              Update
-                          </button>
-                          {/* ======= UPDATE FORM ======= */}
-                          {this.state.showUpdate ? <form id={destination.id} onSubmit={this.updateDestination}>
-                          <label><strong>Location: </strong></label>
-                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationLocation} type="text" placeholder={destination.location}/>
-                          <label><strong>Image: </strong></label>
-                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationImg} type="text" placeholder={destination.img}/>
-                          <label><strong>Rating: </strong></label>
-                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationRating} type="number" max="5" min="1" placeholder={destination.rating}/>
-                          <label><strong>Cost: </strong></label>
-                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationCost} type="number" min="1" max="5" placeholder={destination.cost}/>
-                          <label><strong>Title: </strong></label>
-                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationTitle} type="text" placeholder={destination.title}/>
-                          <label><strong>Date: </strong></label>
-                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDated} type="text" name="begin" min="1997-01-01" max="2030-12-31" placeholder={destination.dated}/>
-                          <textarea className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDescription} placeholder={destination.description}/>
-                              <button className="btn btn-block btn-success" type="submit">Save Changes</button>
-                          </form>: null}
+                      return <div className="col mb-4">
+                              <div className="card">
+                                <div className="view overlay">
+                                  <img src={destination.img} className="card-img-top card-img" />
                                 </div>
-                            </div>
+                                <div className="card-body text-center">
+                                  <h5 className="pink-text"><i className="fas fa-plane-departure"></i> {destination.location}</h5> <br/>
+                                  <h4 className="card-title">{destination.title}</h4>
+                                  <strong>Rating</strong>: {destination.rating} <br/>
+                                  <strong>Cost</strong>: {destination.cost===5? '$$$$$' :null }
+                                  {destination.cost===4? '$$$$' :null }
+                                  {destination.cost===3? '$$$' :null }
+                                  {destination.cost===2? '$$' :null }
+                                  {destination.cost===1? '$' :null }
+                                  <br/>
+                                  <p className="card-text"><strong>Date</strong>: {destination.dated}
+                                  <br/>
+                                  </p>
+                                  <p className="card-text"><strong>Review</strong>:<br/> {destination.description} <br/>
+                                  </p>
+                                  <button className="btn btn-info btn-block btn-danger" value={destination.id} onClick={this.deleteDestination}>
+                                  DELETE
+                                  </button>
+                                  <button className="btn btn-info btn-block" onClick={this.toggleUpdate}>
+                                  Update
+                                  </button>
+                                  {/* ======= UPDATE FORM ======= */}
+                                  {this.state.showUpdate ? <form id={destination.id} onSubmit={this.updateDestination}>
+                                  <label><strong>Location: </strong></label>
+                                  <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationLocation} type="text" placeholder={destination.location}/>
+                                  <label><strong>Image: </strong></label>
+                                  <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationImg} type="text" placeholder={destination.img}/>
+                                  <label><strong>Rating: </strong></label>
+                                  <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationRating} type="number" max="5" min="1" placeholder={destination.rating}/>
+                                  <label><strong>Cost: </strong></label>
+                                  <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationCost} type="number" min="1" max="5" placeholder={destination.cost}/>
+                                  <label><strong>Title: </strong></label>
+                                  <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationTitle} type="text" placeholder={destination.title}/>
+                                  <label><strong>Date: </strong></label>
+                                  <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDated} type="text" name="begin" min="1997-01-01" max="2030-12-31" placeholder={destination.dated}/>
+                                  <label><strong>Description: </strong></label>
+                                  <textarea className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDescription} placeholder={destination.description}/>
+                                  <button className="btn btn-block btn-success" type="submit">Save Changes</button>
+                                  </form>: null}
+                          </div>
                         </div>
-                        
+                      </div>
+
 
                   }
               )
           }
-          
-          </div>      
+
+          </div>
 <footer className="page-footer font-small">
   <div className="container">
-    
+
     <hr className="rgba-white-light" id="firstFooterHR"/>
     <div className="row d-flex text-center justify-content-center mb-md-0 mb-4">
       <div className="col-md-8 col-12 mt-5">
@@ -394,7 +393,7 @@ class App extends React.Component {
     </div>
     <hr className="clearfix rgba-white-light" id="secondFooterHR" />
   </div>
-  
+
   <div className="footer-copyright text-center py-3">© 2020 Copyright:
     <a href="#"> <strong>Destination Ratr</strong></a>
   </div>

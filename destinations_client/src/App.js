@@ -324,7 +324,7 @@ class App extends React.Component {
                           <h4 className="py-lg-4 pb-4 text-center">{destination.location}</h4>
                           <br/>
                             <div className="view view-cascade overlay">
-                              <img src={destination.img} className="card-img-top" />
+                              <img src={destination.img} className="card-img" />
                             <br/>
                             </div>
                           <div className="card-body card-body-cascade">

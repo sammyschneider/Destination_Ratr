@@ -295,7 +295,7 @@ class App extends React.Component {
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationLocation} type="text" placeholder="Where"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationImg} type="text" placeholder="<img>"/>
             <input  className="form-control mb-4" onKeyUp={this.changeNewDestinationRating} type="number" max="5" min="1" placeholder="Rating"/>
-            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" min="0" placeholder="Cost ($)"/>
+            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" min="1" max="5" placeholder="Cost ($)"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationTitle} type="text" placeholder="Title"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationDated} type="text" placeholder="mm/dd/yyyy"/>
             <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" onKeyUp={this.changeNewDestinationDescription}  placeholder="Description"/>
@@ -311,21 +311,24 @@ class App extends React.Component {
                                 {/* ======= CARDS ======= */}
                       return <div className="col-lg-4 col-md-6 mb-4" id="cardposts">
                         <div className="card card-cascade narrower">
-                          <h4 className="py-lg-4 pb-4 text-center">{destination.location}</h4>
-                          <br/>
                             <div className="view view-cascade overlay">
                               <img src={destination.img} className="card-img" />
                             <br/>
                             </div>
-                          <div className="card-body card-body-cascade">
+                          <div className="card-body card-body-cascade text-center">
                           <h5 className="pink-text"><i className="fas fa-plane-departure"></i> {destination.location}</h5> <br/>
                           <h4 className="card-title">{destination.title}</h4>
-                          Rating: {destination.rating} <br/>
-                          Cost: ${destination.cost} <br/>
-                          <p className="card-text">Date: {destination.dated}
+                          <strong>Rating</strong>: {destination.rating} <br/>
+                          <strong>Cost</strong>: {destination.cost===5? '$$$$$' :null }
+                          {destination.cost===4? '$$$$' :null }
+                          {destination.cost===3? '$$$' :null }
+                          {destination.cost===2? '$$' :null }
+                          {destination.cost===1? '$' :null }
+                          <br/>
+                          <p className="card-text"><strong>Date</strong>: {destination.dated}
                           <br/>
                           </p>
-                          <p className="card-text"><span className = "review">Review:</span><br/> {destination.description} <br/>
+                          <p className="card-text"><strong>Review</strong>:<br/> {destination.description} <br/>
                           </p>
                           <button className="btn btn-info btn-block btn-danger" value={destination.id} onClick={this.deleteDestination}>
                               DELETE

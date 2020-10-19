@@ -227,7 +227,7 @@ class App extends React.Component {
       <div className="carousel-inner" role="listbox">
         <div className="carousel-item active">
           <div className="view">
-            <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+            <img className="d-block w-100 vh-75 h-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
               alt="First slide"/>
             <div className="mask rgba-black-light"></div>
           </div>
@@ -244,7 +244,7 @@ class App extends React.Component {
         </div>
         <div className="carousel-item">
           <div className="view">
-            <img className="d-block w-100" src="https://i.ytimg.com/vi/GM9sisF4OEI/maxresdefault.jpg"
+            <img className="d-block w-100 vh-75 h-100" src="https://i.ytimg.com/vi/GM9sisF4OEI/maxresdefault.jpg"
               alt="Second slide"/>
             <div className="mask rgba-black-strong"></div>
           </div>
@@ -261,7 +261,7 @@ class App extends React.Component {
         </div>
         <div className="carousel-item">
           <div className="view">
-            <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+            <img className="d-block w-100 vh-75 h-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
               alt="Third slide"/>
             <div className="mask rgba-black-slight"></div>
           </div>
@@ -314,7 +314,7 @@ class App extends React.Component {
                           <h4 className="py-lg-4 pb-4 text-center">{destination.location}</h4>
                           <br/>
                             <div className="view view-cascade overlay">
-                              <img src={destination.img} className="card-img-top" />
+                              <img src={destination.img} className="card-img" />
                             <br/>
                             </div>
                           <div className="card-body card-body-cascade">

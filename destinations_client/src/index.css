@@ -84,7 +84,7 @@ code {
 #list {
   text-align: center;
 }
-img {
+.card-img {
   width: 311px;
   height: 225px;
 }

@@ -1,4 +1,4 @@
-.z-index {
+#navigation{
   z-index: 2000;
 }
 
@@ -179,4 +179,12 @@ margin: 10% 15% 5%;
 #navExample011 {
   display: flex;
   align-self: flex-end;
+}
+
+#footerSocials {
+
+}
+
+.page-footer {
+  height: 10%;
 }

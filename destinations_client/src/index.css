@@ -6,8 +6,8 @@
   margin-left: 49%
 }
 
-.navbar-expand-lg, 
-.navbar-nav, 
+.navbar-expand-lg,
+.navbar-nav,
 .nav-link {
     padding-right: .5rem;
     padding-left: .5rem;
@@ -21,6 +21,7 @@
 
 #cardposts {
   margin-top: 28px;
+  width: 33%;
 }
 
 .create_form {
@@ -29,7 +30,7 @@
 }
 
 #jumbo {
-background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80")no-repeat center center;
+background: url("https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")no-repeat center center;
 background-size: cover;
 }
 
@@ -74,17 +75,18 @@ code {
     monospace;
 }
 
-/* .sidez {
+.sidez {
   display: flex;
   flex-wrap: wrap;
-} */
+  justify-content: space-around;
+}
 
 #list {
   text-align: center;
 }
 img {
-  width: 100%;
-  height: 100%;
+  width: 311px;
+  height: 225px;
 }
 
 .container-fluid{
@@ -108,3 +110,9 @@ input[type="radio"] {
 
 /* yellow: #ffc107
 gray: #e4e5e9 */
+.py-lg-4 {
+  height: 10px;
+}
+textarea {
+  max-height: 175px;
+}

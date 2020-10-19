@@ -183,11 +183,11 @@ class App extends React.Component {
           <a className="navbar-brand nav-link" target="_blank" href="#">
               <strong>Destination Ratr</strong>
           </a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
           </button>
-        <div className="collapse navbar-collapse" id="navCollapse">
+        <div className="collapse navbar-collapse" id="basicExampleNav">
             <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
                 <li className="nav-item active">
                   <a className="nav-link" aria-current="page" href="#">Home</a>
@@ -227,13 +227,16 @@ class App extends React.Component {
       <div className="carousel-inner" role="listbox">
         <div className="carousel-item active">
           <div className="view">
-            <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg"
+            <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
               alt="First slide"/>
             <div className="mask rgba-black-light"></div>
           </div>
           <div className="carousel-caption">
-            <h4 className="mx-5 mb-5">Where your travel memories and dream destinations collide in order to provide you with a sense of solace and peace.
+            <h4 className="mx-5 mb-5">Welcome to Destination Ratr!
             </h4>
+            <h5>
+            Create your trip now
+            </h5>
             <button onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
             Create
             </button>
@@ -241,13 +244,16 @@ class App extends React.Component {
         </div>
         <div className="carousel-item">
           <div className="view">
-            <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+            <img className="d-block w-100" src="https://i.ytimg.com/vi/GM9sisF4OEI/maxresdefault.jpg"
               alt="Second slide"/>
             <div className="mask rgba-black-strong"></div>
           </div>
           <div className="carousel-caption">
-            <h4 className="mx-5 mb-5">Where your travel memories and dream destinations collide in order to provide you with a sense of solace and peace.
+            <h4 className="mx-5 mb-5">Welcome to Destination Ratr!
             </h4>
+            <h5>
+            Create your trip now
+            </h5>
             <button onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
             Create
             </button>
@@ -255,13 +261,16 @@ class App extends React.Component {
         </div>
         <div className="carousel-item">
           <div className="view">
-            <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+            <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
               alt="Third slide"/>
             <div className="mask rgba-black-slight"></div>
           </div>
           <div className="carousel-caption">
-          <h4 className="mx-5 mb-5">Where your travel memories and dream destinations collide in order to provide you with a sense of solace and peace.
+          <h4 className="mx-5 mb-5">Welcome to Destination Ratr!
           </h4>
+          <h5>
+          Create your trip now
+          </h5>
           <button onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
           Create
           </button>
@@ -286,9 +295,9 @@ class App extends React.Component {
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationLocation} type="text" placeholder="Where"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationImg} type="text" placeholder="<img>"/>
             <input  className="form-control mb-4" onKeyUp={this.changeNewDestinationRating} type="number" max="5" min="1" placeholder="Rating"/>
-            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" placeholder="Cost"/>
+            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" min="0" placeholder="Cost ($)"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationTitle} type="text" placeholder="Title"/>
-            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationDated} type="date" placeholder="Date"/>
+            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationDated} type="text" placeholder="yyyy-mm-dd"/>
             <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" onKeyUp={this.changeNewDestinationDescription}  placeholder="Description"/>
             <button className="btn btn-info btn-block" type="submit">Create</button>
         </form> : null}
@@ -312,10 +321,13 @@ class App extends React.Component {
                           <h5 className="pink-text"><i className="fas fa-plane-departure"></i> {destination.location}</h5> <br/>
                           <h4 className="card-title">{destination.title}</h4>
                           Rating: {destination.rating} <br/>
-                          Cost: {destination.cost} <br/>
-                          <p className="card-text">Date: {destination.dated} <br/>Description: {destination.description} <br/>
+                          Cost: ${destination.cost} <br/>
+                          <p className="card-text">Date: {destination.dated}
+                          <br/>
                           </p>
-                          <button className="btn btn-info btn-block" value={destination.id} onClick={this.deleteDestination}>
+                          <p className="card-text"><span className = "review">Review:</span><br/> {destination.description} <br/>
+                          </p>
+                          <button className="btn btn-info btn-block btn-danger" value={destination.id} onClick={this.deleteDestination}>
                               DELETE
                           </button>
                           <button className="btn btn-info btn-block" onClick={this.toggleUpdate}>
@@ -336,7 +348,7 @@ class App extends React.Component {
                           <label>Date</label>
                           <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDated} type="date" name="begin" min="1997-01-01" max="2030-12-31" placeholder={destination.dated}/>
                           <textarea className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDescription} placeholder={destination.description}/>
-                              <button className="btn btn-info btn-block" type="submit">Save Changes</button>
+                              <button className="btn btn-block btn-success" type="submit">Save Changes</button>
                           </form>: null}
                                 </div>
                             </div>

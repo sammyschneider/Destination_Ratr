@@ -116,3 +116,10 @@ gray: #e4e5e9 */
 textarea {
   max-height: 175px;
 }
+.btn {
+  margin-top: 2%;
+
+}
+.review {
+  text-decoration: underline;
+}

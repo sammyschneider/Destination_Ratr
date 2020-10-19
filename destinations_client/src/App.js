@@ -178,41 +178,23 @@ class App extends React.Component {
 
   render = () => {
       return <div>
-      <nav className="navbar navbar-expand-lg navbar-light d-lg-block" id="navigation">
+      <nav className="navbar navbar-expand-lg navbar-light d-lg-block z-index bg-light" id="navigation">
         <div className="container-fluid">
           <a className="navbar-brand nav-link" target="_blank" href="#">
               <strong>Destination Ratr</strong>
           </a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navExample01"
+            aria-controls="navExample01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-        <div className="collapse navbar-collapse" id="basicExampleNav">
+        <div className="collapse navbar-collapse" id="navExample011">
             <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
-                <li className="nav-item active">
-                  <a className="nav-link" aria-current="page" href="#">Home</a>
-                </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">Register</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">Log In</a>
                 </li>
-                <ul className="navbar-nav list-inline">
-                    {/* ======= ICONS ======= */}
-                <li className>
-                  <a className="nav-link" href="#"><i className="fab fa-linkedin"></i></a>
-                </li>
-                <li className>
-                  <a className="nav-link" href="#"><i className="fab fa-twitter"></i></a>
-                </li>
-                <li className>
-                  <a className="nav-link" href="#"><i className="fab fa-youtube"></i></a>
-                </li>
-                <li className>
-                  <a className="nav-link" href="#"><i className="fab fa-github"></i></a>
-                </li>
-              </ul>
             </ul>
         </div>
       </div>
@@ -227,14 +209,14 @@ class App extends React.Component {
       <div className="carousel-inner" role="listbox">
         <div className="carousel-item active">
             
-            
+
+
           <div className="view">
-            <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
-              alt="First slide"/>
+            <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"alt="Waialua Beach"/>
             <div className="d-flex justify-content-center align-items-center h-100 mask rgba-black-light">
-             
-                
-          </div>
+
+
+          
           </div>
           <div className="carousel-caption">
             <h4 className="mx-5 mb-5 text-white text-center"><strong>Welcome to Destination Ratr!</strong>
@@ -247,10 +229,12 @@ class App extends React.Component {
             </button>
           </div>
         </div>
-        
+</div>
         <div className="carousel-item">
           <div className="view">
+
             <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1500759285222-a95626b934cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+
               alt="Second slide"/>
             <div className="mask rgba-black-strong"></div>
           </div>
@@ -267,7 +251,9 @@ class App extends React.Component {
         </div>
         <div className="carousel-item">
           <div className="view">
+
             <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1461681922067-669418071e5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+
               alt="Third slide"/>
             <div className="mask rgba-black-slight"></div>
           </div>
@@ -301,6 +287,7 @@ class App extends React.Component {
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationLocation} type="text" placeholder="Where"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationImg} type="text" placeholder="<img>"/>
             <input  className="form-control mb-4" onKeyUp={this.changeNewDestinationRating} type="number" max="5" min="1" placeholder="Rating"/>
+            <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" min="1" max="5" placeholder="Cost ($)"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" max="5" min="1" placeholder="Cost ($)"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationTitle} type="text" placeholder="Title"/>
             <input className="form-control mb-4" onKeyUp={this.changeNewDestinationDated} type="text" placeholder="mm/dd/yyyy"/>
@@ -308,9 +295,9 @@ class App extends React.Component {
             <button className="btn btn-info btn-block" type="submit">Create</button>
         </form> : null}
       </div>
-      <div className="ratingOfStars">
+      {/* <div className="ratingOfStars">
                             <StarRating/>
-                    </div>
+                    </div> */}
 
                     {/* ======= DESTINATIONS LIST & CARDS ======= */}
       <h2 className="card-header info-color white-text text-center py-4" id="list">Destinations</h2>
@@ -321,21 +308,24 @@ class App extends React.Component {
                                 {/* ======= CARDS ======= */}
                       return <div className="col-lg-4 col-md-6 mb-4" id="cardposts">
                         <div className="card card-cascade narrower">
-                          <h4 className="py-lg-4 pb-4 text-center">{destination.location}</h4>
-                          <br/>
                             <div className="view view-cascade overlay">
                               <img src={destination.img} className="card-img" />
                             <br/>
                             </div>
-                          <div className="card-body card-body-cascade">
+                          <div className="card-body card-body-cascade text-center">
                           <h5 className="pink-text"><i className="fas fa-plane-departure"></i> {destination.location}</h5> <br/>
                           <h4 className="card-title">{destination.title}</h4>
-                          Rating: {destination.rating} <br/>
-                          Cost: ${destination.cost} <br/>
-                          <p className="card-text">Date: {destination.dated}
+                          <strong>Rating</strong>: {destination.rating} <br/>
+                          <strong>Cost</strong>: {destination.cost===5? '$$$$$' :null }
+                          {destination.cost===4? '$$$$' :null }
+                          {destination.cost===3? '$$$' :null }
+                          {destination.cost===2? '$$' :null }
+                          {destination.cost===1? '$' :null }
+                          <br/>
+                          <p className="card-text"><strong>Date</strong>: {destination.dated}
                           <br/>
                           </p>
-                          <p className="card-text"><span className = "review">Review:</span><br/> {destination.description} <br/>
+                          <p className="card-text"><strong>Review</strong>:<br/> {destination.description} <br/>
                           </p>
                           <button className="btn btn-info btn-block btn-danger" value={destination.id} onClick={this.deleteDestination}>
                               DELETE
@@ -352,7 +342,7 @@ class App extends React.Component {
                           <label>Rating</label>
                           <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationRating} type="number" max="5" min="1" placeholder={destination.rating}/>
                           <label>Cost</label>
-                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationCost} type="number" placeholder={destination.cost}/>
+                          <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationCost} type="number" min="1" max="5" placeholder={destination.cost}/>
                           <label>Title</label>
                           <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationTitle} type="text" placeholder={destination.title}/>
                           <label>Date</label>
@@ -363,11 +353,56 @@ class App extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        
 
                   }
               )
           }
-          </div>
+          
+          </div>      
+<footer className="page-footer font-small">
+  <div className="container">
+    
+    <hr className="rgba-white-light" id="firstFooterHR"/>
+    <div className="row d-flex text-center justify-content-center mb-md-0 mb-4">
+      <div className="col-md-8 col-12 mt-5">
+        <p className="footerP">Thanks for traveling with us!</p>
+      </div>
+    </div>
+    <hr className="clearfix d-md-none rgba-white-light" id="secondFooterHR" />
+    <div className="row pb-3">
+      <div className="col-md-12">
+        <div className="mb-5 flex-center text-center">
+          {/* <!-- Facebook --> */}
+          <a className="fb-ic">
+            <i className="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+          </a>
+          {/* <!-- Twitter --> */}
+          <a className="tw-ic">
+            <i className="fab fa-twitter fa-lg white-text mr-4"> </i>
+          </a>
+          {/* <!--Linkedin --> */}
+          <a className="li-ic">
+            <i className="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
+          </a>
+          {/* <!--Instagram--> */}
+          <a className="ins-ic">
+            <i className="fab fa-instagram fa-lg white-text mr-4"> </i>
+          </a>
+          {/* <!--G--> */}
+          <a className="git-ic">
+            <i className="fab fa-github fa-lg white-text"> </i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr className="clearfix rgba-white-light" id="secondFooterHR" />
+  </div>
+  
+  <div className="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> This is our site</a>
+  </div>
+</footer>
     </div>
   }
 }

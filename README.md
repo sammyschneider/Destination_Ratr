@@ -1,7 +1,5 @@
 # Destination_Ratr
 
-Project #3: Restaraunts on the go
-
 Link to live site: 
 
 Functionality: Created a Full Stack application that utilizes a PHP backend with PostgreSQL as the backend and react as the frontend. This app allows users to create their favorite trips. Users can utilize full CRUD on the app. This app is deployed via heroku. 

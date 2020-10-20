@@ -190,10 +190,10 @@ class App extends React.Component {
         <div className="collapse navbar-collapse" id="navExample011">
             <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Register</a>
+                  <a className="nav-link" href="#"><strong>Register</strong></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Log In</a>
+                  <a className="nav-link" href="#"><strong>Log In</strong></a>
                 </li>
             </ul>
         </div>
@@ -221,7 +221,7 @@ class App extends React.Component {
             <h5>
             Create your trip now
             </h5>
-            <button onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
+            <button data-toggle="modal" data-target="#exampleModal" onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
             Create
             </button>
           </div>
@@ -241,9 +241,10 @@ class App extends React.Component {
             <h5>
             Create your trip now
             </h5>
-            <button onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
+            <button data-toggle="modal" data-target="#exampleModal" onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
             Create
             </button>
+            
           </div>
         </div>
         <div className="carousel-item">
@@ -260,7 +261,7 @@ class App extends React.Component {
           <h5>
           Create your trip now
           </h5>
-          <button onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
+          <button data-toggle="modal" data-target="#exampleModal" onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
           Create
           </button>
           </div>
@@ -279,7 +280,7 @@ class App extends React.Component {
 
 
                 {/* ======= CREATE FORM ======= */}
-      <div className="create_form">
+      <div className="modal-body">
         {this.state.showCreate ? <form className="text-center border border-light p-5" action="#!" onSubmit={this.createDestination}>
             <label><strong>Location: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationLocation} type="text" placeholder="Where"/>
             <label><strong>Image: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationImg} type="text" placeholder="<img>"/>
@@ -297,7 +298,7 @@ class App extends React.Component {
 
                     {/* ======= DESTINATIONS LIST & CARDS ======= */}
       <h2 className="card-header info-color white-text text-center py-4" id="list">Destinations</h2>
-      <div className="row row-cols-1 row-cols-md-3">
+      <div className="row row-cols-1 row-cols-md-3" id="card-container">
           {
               this.state.trips.map(
                   (destination) => {
@@ -361,7 +362,7 @@ class App extends React.Component {
     <hr className="rgba-white-light" id="firstFooterHR"/>
     <div className="row d-flex text-center justify-content-center mb-md-0 mb-4">
       <div className="col-md-8 col-12 mt-5">
-        <p className="footerP">Thanks for traveling with us!</p>
+        <p className="footerP">Thanks for visiting! Follow us on socials, we'll miss you!</p>
       </div>
     </div>
     <hr className="clearfix d-md-none rgba-white-light" id="secondFooterHR" />

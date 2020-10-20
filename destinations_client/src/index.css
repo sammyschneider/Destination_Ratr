@@ -39,7 +39,7 @@
   /* align-items: stretch; */
 }
 
-.create_form {
+.modal-body {
   width: 50%;
   margin: auto;
 }
@@ -199,4 +199,8 @@ margin: 10% 15% 5%;
 
 .page-footer {
   height: 10%;
+}
+
+#card-container {
+  padding: 20px;
 }

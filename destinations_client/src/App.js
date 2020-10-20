@@ -190,10 +190,10 @@ class App extends React.Component {
         <div className="collapse navbar-collapse" id="navExample011">
             <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Register</a>
+                  <a className="nav-link" href="#"><strong>Register</strong></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Log In</a>
+                  <a className="nav-link" href="#"><strong>Log In</strong></a>
                 </li>
             </ul>
         </div>
@@ -212,7 +212,7 @@ class App extends React.Component {
             <img className="d-block w-100 vh-75 h-100" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"alt="Waialua Beach"/>
             <div className="d-flex justify-content-center align-items-center h-100 ">
           </div>
-          <div className="carousel-caption">
+          <div className="carousel-caption text-center">
             <h4 className="mx-5 mb-5 text-white text-center">
                 <strong>
                     Welcome to Destination Ratr!
@@ -221,7 +221,7 @@ class App extends React.Component {
             <h5>
             Create your trip now
             </h5>
-            <button onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
+            <button data-toggle="modal" data-target="#exampleModal" onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
             Create
             </button>
           </div>
@@ -241,9 +241,10 @@ class App extends React.Component {
             <h5>
             Create your trip now
             </h5>
-            <button onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
+            <button data-toggle="modal" data-target="#exampleModal" onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
             Create
             </button>
+            
           </div>
         </div>
         <div className="carousel-item">
@@ -260,7 +261,7 @@ class App extends React.Component {
           <h5>
           Create your trip now
           </h5>
-          <button onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
+          <button data-toggle="modal" data-target="#exampleModal" onClick={this.toggleCreate} className="btn btn-outline-white btn-md" ><i className="fas fa-clone left"></i>
           Create
           </button>
           </div>
@@ -279,15 +280,15 @@ class App extends React.Component {
 
 
                 {/* ======= CREATE FORM ======= */}
-      <div className="create_form">
+      <div className="modal-body">
         {this.state.showCreate ? <form className="text-center border border-light p-5" action="#!" onSubmit={this.createDestination}>
-            <label><strong>Location: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationLocation} type="text" placeholder="Where"/>
-            <label><strong>Image: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationImg} type="text" placeholder="<img>"/>
-            <label><strong>Rating: </strong></label><input  className="form-control mb-4" onKeyUp={this.changeNewDestinationRating} type="number" max="5" min="1" placeholder="Rating"/>
-            <label><strong>Cost: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" max="5" min="1" placeholder="Cost ($)"/>
-            <label><strong>Title: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationTitle} type="text" placeholder="Title"/>
-            <label><strong>Date: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationDated} type="text" placeholder="mm/dd/yyyy"/>
-            <label><strong>Description: </strong></label><textarea className="form-control rounded-0" id="exampleFormControlTextarea2" onKeyUp={this.changeNewDestinationDescription}  placeholder="Description"/>
+            <label className="formLeft"><strong>Location: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationLocation} type="text" placeholder="Where"/>
+            <label className="formLeft" className="formLeft" className="formLeft"><strong>Image: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationImg} type="text" placeholder="<img>"/>
+            <label className="formLeft" className="formLeft"><strong>Rating: </strong></label><input  className="form-control mb-4" onKeyUp={this.changeNewDestinationRating} type="number" max="5" min="1" placeholder="Rating"/>
+            <label className="formLeft"><strong>Cost: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationCost} type="number" max="5" min="1" placeholder="Cost ($)"/>
+            <label className="formLeft" className="formLeft"><strong>Title: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationTitle} type="text" placeholder="Title"/>
+            <label className="formLeft"><strong>Date: </strong></label><input className="form-control mb-4" onKeyUp={this.changeNewDestinationDated} type="text" placeholder="mm/dd/yyyy"/>
+            <label className="formLeft"><strong>Description: </strong></label><textarea className="form-control rounded-0" id="exampleFormControlTextarea2" onKeyUp={this.changeNewDestinationDescription}  placeholder="Description"/>
             <button className="btn btn-info btn-block" type="submit">Create</button>
         </form> : null}
       </div>
@@ -297,7 +298,7 @@ class App extends React.Component {
 
                     {/* ======= DESTINATIONS LIST & CARDS ======= */}
       <h2 className="card-header info-color white-text text-center py-4" id="list">Destinations</h2>
-      <div className="row row-cols-1 row-cols-md-3">
+      <div className="row row-cols-1 row-cols-md-3" id="card-container">
           {
               this.state.trips.map(
                   (destination) => {
@@ -329,19 +330,19 @@ class App extends React.Component {
                                   </button>
                                   {/* ======= UPDATE FORM ======= */}
                                   {this.state.showUpdate ? <form id={destination.id} onSubmit={this.updateDestination}>
-                                  <label><strong>Location: </strong></label>
+                                  <label className="formLeft"><strong>Location: </strong></label>
                                   <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationLocation} type="text" placeholder={destination.location}/>
-                                  <label><strong>Image: </strong></label>
+                                  <label className="formLeft"><strong>Image: </strong></label>
                                   <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationImg} type="text" placeholder={destination.img}/>
-                                  <label><strong>Rating: </strong></label>
+                                  <label className="formLeft"><strong>Rating: </strong></label>
                                   <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationRating} type="number" max="5" min="1" placeholder={destination.rating}/>
-                                  <label><strong>Cost: </strong></label>
+                                  <label className="formLeft"><strong>Cost: </strong></label>
                                   <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationCost} type="number" min="1" max="5" placeholder={destination.cost}/>
-                                  <label><strong>Title: </strong></label>
+                                  <label className="formLeft"><strong>Title: </strong></label>
                                   <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationTitle} type="text" placeholder={destination.title}/>
-                                  <label><strong>Date: </strong></label>
+                                  <label className="formLeft"><strong>Date: </strong></label>
                                   <input className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDated} type="text" name="begin" min="1997-01-01" max="2030-12-31" placeholder={destination.dated}/>
-                                  <label><strong>Description: </strong></label>
+                                  <label className="formLeft"><strong>Description: </strong></label>
                                   <textarea className="form-control mb-4" onKeyUp={this.changeUpdateDestinationDescription} placeholder={destination.description}/>
                                   <button className="btn btn-block btn-success" type="submit">Save Changes</button>
                                   </form>: null}
@@ -361,7 +362,7 @@ class App extends React.Component {
     <hr className="rgba-white-light" id="firstFooterHR"/>
     <div className="row d-flex text-center justify-content-center mb-md-0 mb-4">
       <div className="col-md-8 col-12 mt-5">
-        <p className="footerP">Thanks for traveling with us!</p>
+        <p className="footerP">Thanks for visiting! Follow us on socials, we'll miss you!</p>
       </div>
     </div>
     <hr className="clearfix d-md-none rgba-white-light" id="secondFooterHR" />

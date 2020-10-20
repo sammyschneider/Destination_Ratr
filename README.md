@@ -2,7 +2,7 @@
 
 Link to live site: https://destination-ratr.netlify.app/
 
-Link to back-end deployed on Heroku: https://destination-ratr.netlify.app/
+Link to back-end deployed on Heroku: https://destination-ratr-backend.herokuapp.com/destination
 
 Functionality: Created a Full Stack application that utilizes a PHP backend with PostgreSQL as the backend and react as the frontend. This app allows users to create their favorite trips. Users can utilize full CRUD on the app. This app is deployed via heroku. 
 

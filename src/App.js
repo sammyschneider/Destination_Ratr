@@ -12,7 +12,7 @@ class App extends React.Component {
   }
 
   componentDidMount = () => {
-    axios.get('/destination').then(
+    axios.get('https://destination-ratr-backend.herokuapp.com/destination').then(
         (response) => {
             this.setState({
                 trips: response.data
@@ -67,7 +67,7 @@ class App extends React.Component {
     event.preventDefault();
     event.target.reset();
     axios.post(
-        '/destination',
+        'https://destination-ratr-backend.herokuapp.com/destination',
         {
             location: this.state.newLocation,
             img: this.state.newImg,
@@ -88,7 +88,7 @@ class App extends React.Component {
   }
   // DELETE DESTINATION
   deleteDestination = (event) => {
-  axios.delete('/destination/' + event.target.value).then(
+  axios.delete('https://destination-ratr-backend.herokuapp.com/destination/' + event.target.value).then(
       (response) => {
           this.setState(
               {
@@ -145,7 +145,7 @@ class App extends React.Component {
     event.preventDefault();
     const id = event.target.getAttribute('id');
     axios.put(
-        '/destination/' + id,
+        'https://destination-ratr-backend.herokuapp.com/destination/' + id,
         {
           location: this.state.updateLocation,
           img: this.state.updateImg,

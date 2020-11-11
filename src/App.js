@@ -357,44 +357,44 @@ class App extends React.Component {
 
           </div>
 <footer className="page-footer font-small">
-  <div className="container">
-
-    <hr className="rgba-white-light" id="firstFooterHR"/>
-    <div className="row d-flex text-center justify-content-center mb-md-0 mb-4">
-      <div className="col-md-8 col-12 mt-5">
-        <p className="footerP">Thanks for visiting! Follow us on socials, we'll miss you!</p>
-      </div>
-    </div>
-    <hr className="clearfix d-md-none rgba-white-light" id="secondFooterHR" />
-    <div className="row pb-3">
+    <hr className="clearfix rgba-white-light" id="secondFooterHR" />
+<div className="row pb-3">
       <div className="col-md-12">
         <div className="mb-5 flex-center text-center" id="footerSocials">
-          {/* <!-- Facebook --> */}
-          <a className="fb-ic">
-            <i className="fab fa-facebook-f fa-lg white-text mr-4"> </i>
-          </a>
-          {/* <!-- Twitter --> */}
-          <a className="tw-ic">
-            <i className="fab fa-twitter fa-lg white-text mr-4"> </i>
-          </a>
-          {/* <!--Linkedin --> */}
-          <a className="li-ic">
+          <p>Sammy Schneider:  
+              &nbsp;
+          {/* <!-- Linkedin 1 --> */}
+          <a className="li-ic" href="https://linkedin.com/in/sammy-schneider/" target="_blank">
             <i className="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
           </a>
-          {/* <!--Instagram--> */}
-          <a className="ins-ic">
-            <i className="fab fa-instagram fa-lg white-text mr-4"> </i>
+          {/* <!--Github--> */}
+            <a className="git-ic" href="https://github.com/sammyschneider/Destination_Ratr" target="_blank">
+            <i className="fab fa-github fa-lg white-text"></i>
+            </a>
+            {/* <!--Portfolio--> */}
+          <a className="portfolio" href="https://sammyschneider.dev/" target="_blank">
+            <i className="fas fa-code fa-lg white-text mr-4"></i>
+            </a>
+          </p>
+          |
+          <p>Alby Batista: 
+             &nbsp;
+          {/* <!--Linkedin 2 --> */}
+          <a className="li-ic" href="https://linkedin.com/in/albybatista/" target="_blank">
+            <i className="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
           </a>
           {/* <!--Github--> */}
-          <a className="git-ic">
-            <i className="fab fa-github fa-lg white-text"> </i>
-          </a>
+            <a className="git-ic" href="https://github.com/Albybatista" target="_blank">
+            <i className="fab fa-github fa-lg white-text"></i>
+            </a>
+          {/* <!--Portfolio--> */}
+          <a className="portfolio" href="https://albybatista.com/" target="_blank">
+            <i className="fas fa-code fa-lg white-text mr-4"></i>
+            </a>
+          </p>
         </div>
       </div>
     </div>
-    <hr className="clearfix rgba-white-light" id="secondFooterHR" />
-  </div>
-
   <div className="footer-copyright text-center py-3">© 2020 Copyright:
     <a href="#"> <strong>Destination Ratr</strong></a>
   </div>
@@ -402,8 +402,6 @@ class App extends React.Component {
     </div>
   }
 }
-
-
 
 
 export default App;

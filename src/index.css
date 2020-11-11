@@ -164,7 +164,8 @@ margin: 10% 15% 5%;
 }
 
 #footerSocials {
-
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .page-footer {
@@ -181,3 +182,7 @@ margin: 10% 15% 5%;
   padding: 2px;
 }
 
+.fa-code {
+  margin-left: 12px;
+
+}

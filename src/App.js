@@ -395,8 +395,8 @@ class App extends React.Component {
         </div>
       </div>
     </div>
-  <div className="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="#"> <strong>Destination Ratr</strong></a>
+  <div className="footer-copyright text-center py-3"><strong>© 2020 Copyright:</strong>
+    <a href="https://destination-ratr.netlify.app"> <strong>Destination Ratr</strong></a>
   </div>
 </footer>
     </div>

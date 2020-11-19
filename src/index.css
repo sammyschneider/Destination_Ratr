@@ -71,6 +71,7 @@ code {
 .card-img {
   /* width: 311px; */
   height: 225px;
+  box-shadow: 10px 10px 10px;
 }
 
 .container-fluid{
@@ -185,4 +186,10 @@ margin: 10% 15% 5%;
 .fa-code {
   margin-left: 12px;
 
+}
+
+.card-body {
+  margin-bottom: 20%;
+  max-height: 400px;
+      font-size: small;
 }

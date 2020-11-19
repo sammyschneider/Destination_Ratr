@@ -181,6 +181,9 @@ class App extends React.Component {
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="navigation">
         <div className="container-fluid">
           <a className="navbar-brand nav-link" target="_blank" href="#">
+              <i className="fas fa-passport"></i>
+              &nbsp;
+              &nbsp;
               <strong>Destination Ratr</strong>
           </a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navExample01"
